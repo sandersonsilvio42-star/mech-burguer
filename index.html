@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mech Burguer Premium</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <div class="logo-flame">🔥</div>
+        <div class="logo-text">
+          <span class="logo-mech">MECH</span>
+          <span class="logo-burguer">BURGUER</span>
+          <span class="logo-tagline">★ PREMIUM ★</span>
+        </div>
+      </div>
+
+      <nav class="header-nav" id="headerNav">
+        <a href="#hero" onclick="closeMenu()">Início</a>
+        <!-- <a href="#banners" onclick="closeMenu()">Promoções</a> -->
+        <a href="#cardapio" onclick="closeMenu()">Cardápio</a>
+        <a href="#footer" onclick="closeMenu()">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-horario">⏰ 19:30 – 00:00</div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-img" style="background-image:url('img/mech-tudo.jpg.jpeg')"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge-top">
+        <span>⭐</span> Carne 100% Bovina · Preparo Artesanal <span>⭐</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-sub">Hambúrguer de Verdade,</span>
+        <span class="hero-title-main">SABOR DE<br>RESPEITO!</span>
+      </h1>
+      <p class="hero-desc">Pão brioche artesanal · Ingredientes selecionados · Feito com paixão</p>
+      <div class="hero-ctas">
+        <a href="#cardapio" class="btn-primary">🍔 Ver Cardápio</a>
+        <a href="https://wa.me/5512997779855" target="_blank" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="stat-num">100%</span><span class="stat-label">Bovina</span></div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><span class="stat-num">Artesanal</span><span class="stat-label">Preparo</span></div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat"><span class="stat-num">Premium</span><span class="stat-label">Qualidade</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Rolar para ver o cardápio</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FAIXA PREMIUM (Propaganda)
+  ══════════════════════════════════════════════════════ -->
+  <section class="promo-strip" id="banners">
+    <div class="promo-strip-img">
+      <img src="./img/banner.png" alt="Monte do seu jeito, do seu gosto!" />
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       CARDÁPIO
+  ══════════════════════════════════════════════════════ -->
+  <section class="menu-section" id="cardapio">
+    <div class="section-header">
+      <div class="section-label">CARDÁPIO DIGITAL</div>
+      <h2>Escolha o seu <span>favorito</span></h2>
+      <p>Todos feitos na hora com ingredientes selecionados</p>
+    </div>
+
+    <!-- Filtros de categoria -->
+    <div class="cat-nav-wrap">
+      <nav class="cat-nav" id="catNav">
+        <button class="cat-btn active" data-cat="hamburguer" onclick="filterCategory(this,'hamburguer')">
+          <span class="cat-icon">🍔</span>
+          <span>Hambúrgueres</span>
+        </button>
+        <button class="cat-btn" data-cat="combo" onclick="filterCategory(this,'combo')">
+          <span class="cat-icon">🔥</span>
+          <span>Combos</span>
+        </button>
+        <button class="cat-btn" data-cat="porcao" onclick="filterCategory(this,'porcao')">
+          <span class="cat-icon">🍟</span>
+          <span>Porções</span>
+        </button>
+        <button class="cat-btn" data-cat="bebida" onclick="filterCategory(this,'bebida')">
+          <span class="cat-icon">🥤</span>
+          <span>Bebidas</span>
+        </button>
+        <button class="cat-btn" data-cat="adicionais" onclick="filterCategory(this,'adicionais')">
+          <span class="cat-icon">✨</span>
+          <span>Adicionais</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Grid de itens -->
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODAL — ITEM (Hambúrguer / Combo / etc.)
+  ══════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fechar">✕</button>
+
+      <div id="modalImgArea"></div>
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-row">
+            <h2 id="modalTitle"></h2>
+            <div class="modal-price-badge" id="modalBasePrice"></div>
+          </div>
+          <p id="modalDesc"></p>
+        </div>
+
+        <!-- Adicionais (só hambúrgueres) -->
+        <div class="modal-adicionais" id="modalAdicionais">
+          <div class="adicionais-title">
+            <span>🔥 Turbine seu lanche</span>
+            <span class="tag-opcional">opcional</span>
+          </div>
+
+          <div class="adicional-group">
+            <div class="adicional-group-label">🥩 Proteínas</div>
+            <div class="adicional-list" id="adicionaisProteinas"></div>
+          </div>
+          <div class="adicional-group">
+            <div class="adicional-group-label">🧀 Queijos Especiais</div>
+            <div class="adicional-list" id="adicionaisQueijos"></div>
+          </div>
+          <div class="adicional-group">
+            <div class="adicional-group-label">🥗 Complementos</div>
+            <div class="adicional-list" id="adicionaisComplementos"></div>
+          </div>
+          <div class="adicional-group">
+            <div class="adicional-group-label">🍶 Molhos Extras</div>
+            <div class="adicional-list" id="adicionaisMolhos"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="qty-row">
+            <div class="qty-ctrl">
+              <button onclick="changeQty(-1)" aria-label="Diminuir">−</button>
+              <span id="modalQty">1</span>
+              <button onclick="changeQty(1)" aria-label="Aumentar">+</button>
+            </div>
+            <div class="modal-total-display">
+              <span>Total</span>
+              <strong id="modalTotal">R$ 0,00</strong>
+            </div>
+          </div>
+          <button class="btn-add-cart" onclick="addToCart()">
+            🛒 Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       MODAL — ADICIONAIS (só visualização)
+  ══════════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="adicionaisOverlay" onclick="closeAdicionaisOutside(event)">
+    <div class="modal modal-adicionais-view" id="adicionaisModal" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeAdicionaisModal()" aria-label="Fechar">✕</button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>✨ Adicionais Disponíveis</h2>
+          <p>Turbine qualquer hambúrguer do seu jeito!</p>
+        </div>
+
+        <div class="adicionais-view-section">
+          <div class="adicionais-view-title">🥩 Proteínas</div>
+          <div class="adicionais-view-grid" id="viewProteinas"></div>
+        </div>
+        <div class="adicionais-view-section">
+          <div class="adicionais-view-title">🧀 Queijos Especiais</div>
+          <div class="adicionais-view-grid" id="viewQueijos"></div>
+        </div>
+        <div class="adicionais-view-section">
+          <div class="adicionais-view-title">🥗 Complementos</div>
+          <div class="adicionais-view-grid" id="viewComplementos"></div>
+        </div>
+        <div class="adicionais-view-section">
+          <div class="adicionais-view-title">🍶 Molhos Extras</div>
+          <div class="adicionais-view-grid" id="viewMolhos"></div>
+        </div>
+
+        <div class="adicionais-view-footer">
+          <p>Para adicionar ao pedido, escolha um hambúrguer e personalize!</p>
+          <button class="btn-primary" onclick="closeAdicionaisModal(); filterCategory(document.querySelector('[data-cat=hamburguer]'),'hamburguer')">
+            🍔 Ver Hambúrgueres
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       CARRINHO LATERAL
+  ══════════════════════════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay" onclick="closeCartOutside(event)">
+    <aside class="cart-panel" id="cartPanel">
+      <div class="cart-header">
+        <div class="cart-header-title">
+          <span>🛒</span>
+          <h2>Seu Pedido</h2>
+        </div>
+        <button onclick="toggleCart()" aria-label="Fechar carrinho">✕</button>
+      </div>
+
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty-state">
+          <div class="cart-empty-icon">🍔</div>
+          <p>Seu carrinho está vazio</p>
+          <span>Adicione itens do cardápio</span>
+        </div>
+      </div>
+
+      <div class="cart-footer" id="cartFooter" style="display:none">
+        <div class="cart-form-section">
+          <div class="cart-form-label">📍 Como quer receber?</div>
+          <div class="radio-group">
+            <label class="radio-pill">
+              <input type="radio" name="entrega" value="entrega" onchange="toggleEntrega()" />
+              <span>🛵 Entrega</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="entrega" value="retirada" onchange="toggleEntrega()" />
+              <span>🏪 Retirar</span>
+            </label>
+          </div>
+          <div id="enderecoField" style="display:none">
+            <input type="text" id="enderecoInput" placeholder="Endereço completo..." class="cart-input" />
+          </div>
+        </div>
+
+        <div class="cart-form-section">
+          <div class="cart-form-label">💳 Pagamento</div>
+          <div class="radio-group">
+            <label class="radio-pill">
+              <input type="radio" name="pagamento" value="pix" onchange="togglePagamento()" />
+              <span>📱 Pix</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="pagamento" value="debito" onchange="togglePagamento()" />
+              <span>💳 Débito</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="pagamento" value="credito" onchange="togglePagamento()" />
+              <span>💳 Crédito</span>
+            </label>
+            <label class="radio-pill">
+              <input type="radio" name="pagamento" value="dinheiro" onchange="togglePagamento()" />
+              <span>💵 Dinheiro</span>
+            </label>
+          </div>
+          <div id="trocoField" style="display:none">
+            <input type="number" id="trocoInput" placeholder="Troco para R$..." class="cart-input" min="0" step="0.01" />
+          </div>
+        </div>
+
+        <div class="cart-form-section">
+          <div class="cart-form-label">👤 Seu nome</div>
+          <input type="text" id="nomeInput" placeholder="Como te chamamos?" class="cart-input" />
+        </div>
+
+        <div class="cart-total-row">
+          <span>Total do pedido</span>
+          <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+
+        <button class="btn-whatsapp-full" onclick="finalizarPedido()">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Finalizar pelo WhatsApp
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       BOTÃO FLUTUANTE DO CARRINHO
+  ══════════════════════════════════════════════════════ -->
+  <button class="fab-cart" id="fabCart" onclick="toggleCart()" aria-label="Abrir carrinho">
+    <span class="fab-icon">🛒</span>
+    <span class="fab-badge" id="fabBadge" style="display:none">0</span>
+    <span class="fab-label">Carrinho</span>
+  </button>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-mech">MECH</span>
+          <span class="logo-burguer">BURGUER</span>
+        </div>
+        <p class="footer-slogan">Sabor real, feito com paixão!</p>
+      </div>
+      <div class="footer-info">
+        <h4>Informações</h4>
+        <p>📍 [PREENCHER ENDEREÇO]</p>
+        <p>⏰ [PREENCHER DIAS] · 19:30 – 00:00</p>
+        <p>📱 (12) 99777-9855</p>
+      </div>
+      <div class="footer-badges-col">
+        <h4>Nossos diferenciais</h4>
+        <div class="footer-badges">
+          <span>🥩 Carne 100% Bovina</span>
+          <span>🍞 Pão Brioche Artesanal</span>
+          <span>🔥 Preparo Artesanal</span>
+          <span>❤️ Feito com Paixão</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Mech Burguer Premium · Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
